@@ -1,5 +1,4 @@
 import httpClient from "@/services/http.service";
-import router from "@/router";
 
 const authService = {
     postAuth(data) {
@@ -8,9 +7,8 @@ const authService = {
     postRegister(data) {
         return httpClient.post(`api/register`, data)
     },
-    logout() {
-        localStorage.clear()
-        router.push('/auth')
+    postLogout() {
+        return httpClient.post(`api/logout`)
     },
 }
 

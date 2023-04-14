@@ -1,5 +1,5 @@
 <template>
-  <Button @click="lol">Logout</Button>
+  <Button @click="POST_LOGOUT">Logout</Button>
 </template>
 <script>
 import {mapActions} from "vuex";
@@ -7,10 +7,6 @@ import {mapActions} from "vuex";
 export default {
   methods: {
     ...mapActions('auth', ['POST_LOGOUT']),
-
-    lol(){
-
-    }
   }
 }
 </script>

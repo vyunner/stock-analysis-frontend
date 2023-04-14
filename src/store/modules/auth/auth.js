@@ -1,5 +1,6 @@
 import {createStore} from 'vuex'
 import authService from "@/services/auth/auth.service";
+import router from "@/router";
 
 const auth = {
     namespaced: true,
@@ -28,6 +29,8 @@ const auth = {
         async POST_LOGOUT(){
             try {
                 const response = await authService.postLogout()
+                await router.push('/auth')
+                localStorage.clear()
                 console.log(response)
                 return response
             } catch (e) {
