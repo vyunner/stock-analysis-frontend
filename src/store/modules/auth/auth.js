@@ -19,7 +19,6 @@ const auth = {
         async POST_REGISTER({commit}, data) {
             try {
                 const response = await authService.postRegister(data)
-                commit('SET_DATA_USER', response.data.data, {root: true});
                 return response
             } catch (e) {
                 console.log(e)
