@@ -18,14 +18,13 @@ const auth = {
         },
         async POST_REGISTER({commit}, data) {
             try {
-                const response = await authService.postRegister(data)
-                return response
+                return await authService.postRegister(data)
             } catch (e) {
                 console.log(e)
                 return e.response
             }
         },
-        async POST_LOGOUT(){
+        async POST_LOGOUT() {
             try {
                 const response = await authService.postLogout()
                 await router.push('/auth')
