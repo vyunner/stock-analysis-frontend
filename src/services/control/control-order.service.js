@@ -5,13 +5,13 @@ const controlOrderService = {
     return httpClient.post(`api/order`, data)
   },
   putOrder(data) {
-    return httpClient.put(`api/oder/${data.id}`, data)
+    return httpClient.put(`api/order/${data.id}`, data)
   },
   deleteOrder(id) {
-    return httpClient.delete(`api/oder/${id}`)
+    return httpClient.delete(`api/order/${id}`)
   },
   getOrders() {
-    return httpClient.get(`api/oder`)
+    return httpClient.get(`api/order`)
   },
 }
 

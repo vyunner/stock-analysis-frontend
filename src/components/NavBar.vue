@@ -16,13 +16,8 @@
               <li><router-link class="dropdown-item" href="#" to="/control-order">Заказы</router-link></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Аналитика</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><router-link class="dropdown-item" href="#" to="/control-category">Категорий</router-link></li>
-              <li><router-link class="dropdown-item" href="#" to="/control-category">Продукты</router-link></li>
-            </ul>
+          <li class="nav-item ">
+            <router-link class="nav-link" href="#" role="button" aria-expanded="false" to="/analytics">Аналитика</router-link>
           </li>
         </ul>
         <div class="navbar-input-group input-group d-flex justify-content-center py-2">

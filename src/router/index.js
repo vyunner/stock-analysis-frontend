@@ -25,6 +25,11 @@ const routes = [
     path: '/control-order',
     name:'control-order',
     component: () => import('@/views/control/ControlOrders.vue')
+  },
+  {
+    path: '/analytics',
+    name:'analytics',
+    component: () => import('@/views/analytics/AnalyticsView.vue')
   }
 ]
 

@@ -156,6 +156,7 @@ export default {
       this.isProductEditModalActive = true
     },
     closeProductEditModal() {
+      this.productModel = {}
       this.isProductEditModalActive = false
     },
     async editProduct(){
@@ -167,7 +168,7 @@ export default {
       if (putRes.status === 200){
         await this.GET_PRODUCTS();
         await this.GET_CATEGORIES();
-        this.$message({title: 'Успешно создано'})
+        this.$message({title: 'Успешно изменено!'})
         this.closeProductEditModal()
       } else {
         this.$error({title: 'Что то пошло не так!'})
