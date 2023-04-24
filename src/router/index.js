@@ -3,13 +3,28 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: () => import('@/views/HomeView.vue')
   },
   {
     path: '/auth',
-    name:'Auth',
+    name:'auth',
     component: () => import('@/views/AuthView.vue')
+  },
+  {
+    path: '/control-category',
+    name: 'control-category',
+    component: () => import('@/views/control/ControlCategories.vue')
+  },
+  {
+    path: '/control-product',
+    name:'control-product',
+    component: () => import('@/views/control/ControlProducts.vue')
+  },
+  {
+    path: '/control-order',
+    name:'control-order',
+    component: () => import('@/views/control/ControlOrders.vue')
   }
 ]
 

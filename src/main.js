@@ -11,6 +11,8 @@ import router from './router'
 import store from './store'
 import PrimeVue from 'primevue/config';
 import ToastService from "primevue/toastservice";
+import messagePlugin from './utils/message.plugin'
+
 
 import Toast from 'primevue/toast';
 import InputText from 'primevue/inputtext';
@@ -19,17 +21,41 @@ import Button from 'primevue/button';
 import ProgressSpinner from 'primevue/progressspinner';
 import Password from 'primevue/password';
 
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import ColumnGroup from 'primevue/columngroup';
+import Row from 'primevue/row';
+import Dialog from 'primevue/dialog';
+import InputNumber from 'primevue/inputnumber';
+import Calendar from 'primevue/calendar';
+import Dropdown from 'primevue/dropdown';
+import Message from 'primevue/message';
+
+
 const app = createApp(App);
 
-app.use(router)
-    .use(PrimeVue)
-    .use(ToastService)
-    .use(store)
-    .mount('#app');
 
 app.component('InputText', InputText)
+    .component('InputNumber', InputNumber)
     .component('Checkbox', Checkbox)
     .component('Button', Button)
     .component('ProgressSpinner', ProgressSpinner)
     .component('Password', Password)
     .component('Toast', Toast)
+    .component('DataTable', DataTable)
+    .component('Column', Column)
+    .component('ColumnGroup', ColumnGroup)
+    .component('Row', Row)
+    .component('Dialog', Dialog)
+    .component('Calendar', Calendar)
+    .component('Dropdown', Dropdown)
+    .component('Message', Message)
+
+app.use(router)
+  .use(PrimeVue)
+  .use(ToastService)
+  .use(store)
+  .use(messagePlugin)
+  .mount('#app');
+
+

@@ -1,13 +1,30 @@
 <template>
-  <Button @click="POST_LOGOUT">Logout</Button>
+  <div>
+    <nav-bar @nav-click="(value) => navData = value"></nav-bar>
+    {{navData}}
+  </div>
 </template>
+
 <script>
-import {mapActions} from "vuex";
+import NavBar from "@/components/NavBar.vue";
 
 export default {
+  components: {NavBar},
+  data(){
+    return{
+      navData: null,
+    }
+  },
   methods: {
-    ...mapActions('auth', ['POST_LOGOUT']),
+
+  },
+  mounted() {
+
   }
 }
 </script>
-<style scoped></style>
+
+<style scoped>
+
+</style>
+
