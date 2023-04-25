@@ -4,7 +4,9 @@ import auth from "@/store/modules/auth/auth"
 import controlCategories from "@/store/modules/control/control-categories";
 import controlProducts from "@/store/modules/control/control-products";
 import controlOrders from "@/store/modules/control/control-orders";
-import expiry from "@/store/modules/expiries/expiry";
+import expiry from "@/store/modules/expiry/expiry";
+import analytics from "@/store/modules/analytics/analytics";
+import amount from "@/store/modules/amount/amount";
 
 export default createStore({
   state: {
@@ -28,6 +30,8 @@ export default createStore({
     controlCategories,
     controlProducts,
     controlOrders,
-    expiry
+    expiry,
+    analytics,
+    amount
   }
 })

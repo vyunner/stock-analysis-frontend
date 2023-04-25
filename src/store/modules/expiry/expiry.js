@@ -1,4 +1,4 @@
-import expiryService from "@/services/expiries/expiry.service";
+import expiryService from "@/services/expiry/expiry.service";
 
 const expiry = {
   namespaced: true,

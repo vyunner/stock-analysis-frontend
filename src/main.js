@@ -30,6 +30,8 @@ import InputNumber from 'primevue/inputnumber';
 import Calendar from 'primevue/calendar';
 import Dropdown from 'primevue/dropdown';
 import Message from 'primevue/message';
+import SelectButton from 'primevue/selectbutton';
+import Chart from 'primevue/chart';
 
 
 const app = createApp(App);
@@ -50,6 +52,8 @@ app.component('InputText', InputText)
     .component('Calendar', Calendar)
     .component('Dropdown', Dropdown)
     .component('Message', Message)
+    .component('SelectButton', SelectButton)
+    .component('Chart', Chart)
 
 app.use(router)
   .use(PrimeVue)
