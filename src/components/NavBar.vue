@@ -21,7 +21,7 @@
           </li>
         </ul>
         <div class="navbar-input-group input-group d-flex justify-content-center py-2">
-          <input type="text" class="form-control" aria-describedby="button-addon2" :value="name" disabled>
+          <input type="text" class="form-control" aria-describedby="button-addon2" :value="dataUser.login" disabled>
           <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="logOut()"><i @click="logOut()" class="pi pi-sign-out" style="color: white"></i></button>
         </div>
       </div>
@@ -39,7 +39,6 @@ export default {
       name: 'Жунусов Мади',
       dataUser: {
         login: null,
-        password: null,
       }
     }
   },
@@ -61,7 +60,11 @@ export default {
     }
   },
   mounted() {
-
+    try {
+      this.dataUser.login = JSON.parse(localStorage.getItem('dataUser')).user.login
+    } catch (e){
+      this.$router.push('/auth')
+    }
   }
 }
 </script>

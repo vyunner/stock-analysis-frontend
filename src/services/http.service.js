@@ -3,7 +3,7 @@ import authService from "@/services/auth/auth.service";
 import router from "@/router";
 
 /** Default config for axios instance */
-const API_ENDPOINT = 'http://stock-analysis-backend/';
+const API_ENDPOINT = 'http://192.168.0.112/';
 let config = {
     baseURL: `${API_ENDPOINT}`,
 };

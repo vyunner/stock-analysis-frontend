@@ -2,7 +2,7 @@
   <Toast position="bottom-right"/>
   <div class="container">
     <div class="login-form-container">
-      <div class="p-grid p-fluid col-4">
+      <div class="p-grid p-fluid col-md-4">
         <div class="p-col-8 p-mx-auto">
           <div class="p-field">
             <label for="username">Имя пользователя:</label>
@@ -24,6 +24,7 @@
 
 <script>
 import {mapActions, mapState} from "vuex";
+import axios from "axios";
 
 export default {
   name: "HomeView",
@@ -52,7 +53,7 @@ export default {
       }
     },
     async register() {
-      const {status} = await this.POST_REGISTER(this.dataUser)
+        const {status} = await this.POST_REGISTER(this.dataUser)
 
       if (status === 200) {
         this.$toast.add({

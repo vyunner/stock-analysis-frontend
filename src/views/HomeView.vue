@@ -22,13 +22,13 @@
         </DataTable>
       </div>
       <div class="mt-3 mx-auto">
-        <h3 class="mt-5 mb-3 text-center">Товары на исходе:</h3>
+        <h3 class="mt-5 mb-3 text-center">Товаров осталось мало стот докупить!</h3>
         <DataTable :value="amounts" paginator :rows="5" :rowsPerPageOptions="[5, 10, 20, 50]" tableStyle="min-width: 15rem max-width: 25rem"
                    paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
                    currentPageReportTemplate="{first} to {last} of {totalRecords}">
           <Column header="№" class="col-1">
             <template #body="{index}">
-              {{ index + 1 }}
+              {{ index + 1 }}-
             </template>
           </Column>
           <Column field="name" header="Название" class="col-3"></Column>
