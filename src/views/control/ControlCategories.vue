@@ -24,7 +24,6 @@
       </DataTable>
     </div>
   </div>
-
   <Dialog v-model:visible="isCategoryCreateModalActive" modal header="Создать категорию" :style="{ width: '50vh' }">
     <p>Название категорий:</p>
     <InputText type="text" class="col-12" placeholder="Название" v-model="categoryModel.name" />
@@ -33,7 +32,6 @@
       <Button class="bg-dark text-white mb-1" style="border: 1px solid #212529" label="Создать" icon="pi pi-check" @click="createCategory(categoryModel.name)" />
     </template>
   </Dialog>
-
   <Dialog v-model:visible="isCategoryEditModalActive" modal header="Создать категорию" :style="{ width: '50vh' }">
     <p class="p-0 ms-2">Название категорий:</p>
     <div class="row ms-2">

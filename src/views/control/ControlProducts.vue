@@ -70,7 +70,7 @@
     <p class="mb-2"><b>Количество продукта:</b><span style="color:red">&#42;</span></p>
     <InputNumber class="col-12 mb-2 p-0" placeholder="Кол.во" v-model="productModel.product_amount" />
     <p class="mb-2"><b>Истекает в:</b></p>
-    <Calendar class="col-12 mb-2 p-0" dateFormat="yy-mm-dd" placeholder="Дата" v-model="productModel.expiry_date" />
+    <Calendar class="col-12 mb-2 p-0" dateFormat="yy-mm-dd" placeholder="Дата" v-model="productModel.expiry_date"/>
     <p class="mb-2"><b>Название категорий:</b><span style="color:red">&#42;</span></p>
     <Dropdown class="col-12 mb-2 p-0" editable :options="categories" optionLabel="name" optionValue="id" placeholder="Категория" v-model="productModel.category_id" />
     <template #footer>
@@ -119,12 +119,14 @@ export default {
     'productModel.category_id'(newVal, oldVal){
       this.checkValidation()
     },
+    'products[0].expiry_date'(newVal, oldVal){
+      console.log(this.products)
+    },
   },
 
   methods: {
     ...mapActions('controlProducts', ['GET_PRODUCTS', "POST_PRODUCT", "PUT_PRODUCT", "DELETE_PRODUCT"]),
     ...mapActions('controlCategories', ['GET_CATEGORIES']),
-
 
     openCreateProductModal() {
       this.productModel = {}

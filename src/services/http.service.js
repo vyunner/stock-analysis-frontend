@@ -2,13 +2,11 @@ import axios from 'axios';
 import authService from "@/services/auth/auth.service";
 import router from "@/router";
 
-/** Default config for axios instance */
 const API_ENDPOINT = 'http://192.168.0.112/';
 let config = {
     baseURL: `${API_ENDPOINT}`,
 };
 
-/** Creating the instance for axios */
 const httpClient = axios.create(config);
 
 const authInterceptor = config =>{
@@ -18,13 +16,9 @@ const authInterceptor = config =>{
     }
     return config;
 }
-
 httpClient.interceptors.request.use(authInterceptor);
-
-/** Adding the response interceptors */
 httpClient.interceptors.response.use(
     response => {
-        /** TODO: Add any response interceptors */
         return response;
     },
     error => {
@@ -37,5 +31,4 @@ httpClient.interceptors.response.use(
         return Promise.reject(error);
     }
 );
-
 export default httpClient;
